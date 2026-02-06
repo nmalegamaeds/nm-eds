@@ -1,9 +1,16 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: #082439;
 }
 
-footer .footer > div {
+.footer {
+  font-size: var(--body-font-size-xs);
+  background: url(../../images/bg-footer.jpg) center / cover no-repeat;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: white;
+}
+
+footer .footer>div {
   margin: auto;
   max-width: 1200px;
   padding: 40px 24px 24px;
@@ -11,10 +18,71 @@ footer .footer > div {
 
 footer .footer p {
   margin: 0;
+  margin-bottom: 1.5rem;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
+@media (width >=900px) {
+  footer .footer>div {
     padding: 40px 32px 24px;
+  }
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.footer-container p {
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+}
+
+footer .nav-links ul li {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  box-shadow: rgba(137, 171, 143, 0.1) 0px 1px 0px;
+  padding-bottom: 1rem;
+}
+
+.footer-container a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .nav-tools p {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .footer-container>.section {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-container {
+    flex-flow: row;
+  }
+
+  .footer-container>.section {
+    flex: 1;
+  }
+
+  .footer-container>.nav-links {
+    flex-basis: 25%;
+  }
+
+  .footer-container>.nav-tools {
+    flex-basis: 50%;
+  }
+
+  footer .nav-links ul li {
+    margin-right: 2rem;
+
   }
 }
