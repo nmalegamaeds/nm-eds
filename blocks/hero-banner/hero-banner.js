@@ -23,12 +23,12 @@ function renderBlock(cmp) {
     </div>
   `;
 
-  cmp.innerHTML = "";
+  cmp.innerHTML = '';
   cmp.append(bannerContainerDiv);
   cmp.append(bottomBarDiv);
 
   // change css custom property
-  document.documentElement.style.setProperty("--bg1", `url(${imgPath})`);
+  document.documentElement.style.setProperty('--bg1', `url(${imgPath})`);
 }
 
 export default renderBlock;

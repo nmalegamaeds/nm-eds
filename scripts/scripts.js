@@ -14,22 +14,21 @@ import {
 } from './aem.js';
 
 /**
- * Builds hero block and prepends to main in a new section.
- * @param {Element} main The container element
- 
+* Builds hero block and prepends to main in a new section.
+* @param {Element} main The container element
 function buildHeroBlock(main) {
-  const h1 = main.querySelector('h1');
-  const picture = main.querySelector('picture');
-  // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
-    // Check if h1 or picture is already inside a hero block
-    if (h1.closest('.hero') || picture.closest('.hero')) {
-      return; // Don't create a duplicate hero block
-    }
-    const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
-    main.prepend(section);
-  }
+const h1 = main.querySelector('h1');
+const picture = main.querySelector('picture');
+// eslint-disable-next-line no-bitwise
+if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+// Check if h1 or picture is already inside a hero block
+if (h1.closest('.hero') || picture.closest('.hero')) {
+  return; // Don't create a duplicate hero block
+}
+const section = document.createElement('div');
+section.append(buildBlock('hero', { elems: [picture, h1] }));
+main.prepend(section);
+}
 }*/
 
 /**
